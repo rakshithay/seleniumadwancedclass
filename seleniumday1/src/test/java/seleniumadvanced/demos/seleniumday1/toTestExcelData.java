@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
@@ -34,8 +33,8 @@ public class toTestExcelData
 		}
 		else if(value.equals("mozilla"))
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\training_b4c.06.01\\Downloads\\chromedriver_win32\\chromedriver.exe");
-			WebDriver driver = new FirefoxDriver();
+			System.setProperty("webdriver.gecko.driver", "C:\\Users\\training_b4c.06.01\\Downloads\\geckodriver-v0.24.0-win64\\geckodriver.exe");
+			driver = new FirefoxDriver();
 		}
 		driver.manage().window().maximize();
 		driver.get("http://demowebshop.tricentis.com/");

@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test2IE(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="Test1chrome(failed)" parallel="tests">
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="seleniumadvanced.demos.seleniumday1.toTestExcelData">
+        <methods>
+          <include name="afterTest"/>
+          <include name="testLink"/>
+          <include name="testExcelData" invocation-numbers="3"/>
+        </methods>
+      </class> <!-- seleniumadvanced.demos.seleniumday1.toTestExcelData -->
+    </classes>
+  </test> <!-- Test1chrome(failed) -->
+  <test thread-count="5" name="Test2mozilla(failed)" parallel="tests">
     <parameter name="Browser" value="mozilla"/>
     <classes>
       <class name="seleniumadvanced.demos.seleniumday1.toTestExcelData">
         <methods>
           <include name="afterTest"/>
           <include name="testLink"/>
-          <include name="testExcelData"/>
+          <include name="testExcelData" invocation-numbers="0 1 2 3"/>
         </methods>
       </class> <!-- seleniumadvanced.demos.seleniumday1.toTestExcelData -->
     </classes>
-  </test> <!-- Test2IE(failed) -->
+  </test> <!-- Test2mozilla(failed) -->
 </suite> <!-- Failed suite [Suite] -->

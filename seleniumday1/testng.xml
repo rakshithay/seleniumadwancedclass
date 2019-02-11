@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Suite">
+<suite name="Suite" parallel="tests">
   
   <test name="Test1chrome" thread-count="5">
   <parameter name="Browser" value="chrome"></parameter>
@@ -10,7 +10,7 @@
     </classes> 
   </test> 
   
-  <test name="Test2IE" thread-count="5">
+  <test name="Test2mozilla" thread-count="5">
   <parameter name="Browser" value="mozilla"></parameter>
     <classes>
       <class name="seleniumadvanced.demos.seleniumday1.toTestExcelData"/>
